@@ -22,29 +22,21 @@ namespace Code.Infrastructure
             BindStaticData();
         }
 
-        private void BindFactory()
-        {
+        private void BindFactory() => 
             Container.BindInterfacesTo<UIFactory>().AsSingle();
-        }
-        
-        private void BindSaveLoad()
-        {
-            Container.Bind<ISaveLoadFacade>().To<UnifiedSaveLoadFacade>().AsSingle();
-        }
+
+        private void BindSaveLoad() => 
+            Container.Bind<ISaveLoadService>().To<PrefsSaveLoadService>().AsSingle();
 
         private void BindProgressData() =>
             Container.Bind<IPersistenceProgressService>().To<PersistenceProgressService>().AsSingle();
         
-        
-        private void BindStaticData()
-        {
+        private void BindStaticData() => 
             Container.Bind<IStaticDataService>().To<StaticDataService>().AsSingle();
-        }
-        
+
         public void Initialize()
         {
             Container.Resolve<IStaticDataService>().LoadData();
-            
             SceneManager.LoadScene(SceneName);
         }
     }
