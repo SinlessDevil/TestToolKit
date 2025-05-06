@@ -1,0 +1,24 @@
+{
+    "Levels": [
+        {
+            "LevelId": 0,
+            "LevelName": "",
+            "RequiredXP": 0,
+            "Reward": {
+                "Gold": 0,
+                "Gems": 0
+            },
+            "RewardItems": [],
+            "EnemyWaves": [],
+            "IsBossLevel": false,
+            "UnlockAtLevel": 0,
+            "UnlockConditions": [],
+            "ActiveBuffs": [],
+            "EventData": {
+                "HasEvent": false,
+                "EventName": "",
+                "Description": ""
+            }
+        }
+    ]
+}
